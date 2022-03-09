@@ -1,4 +1,5 @@
-﻿using System;
+﻿using GameServer.Util;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net.Sockets;
@@ -7,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace GameServer.Manager
 {
-	internal class BufferManager
+	internal class BufferManager : Singleton<BufferManager>
 	{
 		// 이 버퍼 풀에서 제어할 총 바이트 수
 		int m_numBytes;
@@ -15,6 +16,8 @@ namespace GameServer.Manager
 		Stack<int> m_freeIndexPool;
 		int m_currentIndex;
 		int m_bufferSize;
+
+		public BufferManager() { }
 
 		public BufferManager(int totalBytes, int bufferSize)
 		{

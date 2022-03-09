@@ -55,7 +55,7 @@ namespace GameServer.Network
 				//listenThread.Start();
 				Task listenTask = new Task(doListen);
 				listenTask.Start();
-				listenTask.Wait();
+				//listenTask.Wait();
 
 				//m_listenSocket.AcceptAsync(m_acceptArgs);
 			}

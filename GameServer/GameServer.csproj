@@ -104,14 +104,20 @@
     <Compile Include="Network\Listener\Listener.cs" />
     <Compile Include="Network\Token\CustomUserToken.cs" />
     <Compile Include="Packet\CustomPacket.cs" />
+    <Compile Include="Packet\PacketData.cs" />
+    <Compile Include="Packet\PacketHandler.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="User\GameUser.cs" />
+    <Compile Include="Util\Singleton.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Contents\Chat\" />
+    <Folder Include="Contents\Login\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

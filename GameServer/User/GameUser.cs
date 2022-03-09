@@ -12,30 +12,23 @@ namespace GameServer.User
 	class GameUser : IPeer
 	{
 		CustomUserToken m_token;
+		PacketHandler m_packetHandler;
 
 		public GameUser(CustomUserToken token)
 		{
 			m_token = token;
 			m_token.SetPeer(this);
+
+			m_packetHandler = new PacketHandler(token);
 		}
 
 		void IPeer.OnPacket(byte[] buffer)
 		{
-			// 에코 채팅 관련 패킷 처리문
-			CustomPacket req = new CustomPacket(buffer, this);
-			PT protocolID = (PT)req.PopProtocalID();
+			byte[] packetClone = new byte[1024];
+			Array.Copy(buffer, packetClone, buffer.Length);
 
-			switch(protocolID)
-			{
-				case PT.PT_CS_CHAT_REQ:
-					string text = req.PopString();
-					Console.WriteLine($"Chat : {text}");
-
-					CustomPacket ack = CustomPacket.Create((short)PT.PT_SC_CHAT_ACK);
-					ack.Push(text);
-					OnSend(ack);
-				break;
-			}
+			CustomPacket packet = new CustomPacket(packetClone, this);
+			Program.mainGame.EnqueuePacket(packet, this);
 		}
 
 		void IPeer.OnRemove()
@@ -57,7 +50,7 @@ namespace GameServer.User
 
 		void IPeer.OnProcessUserOperation(CustomPacket packet)
 		{
-
+			m_packetHandler.ParsePacket(packet);
 		}
 	}
 }

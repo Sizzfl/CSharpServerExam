@@ -157,5 +157,12 @@ namespace GameServer.Packet
 			tempBuffer.CopyTo(m_buffer, m_position);
 			m_position += tempBuffer.Length;
 		}
+
+		public void Push(byte[] data)
+		{
+			byte[] tempBuffer = data;
+			tempBuffer.CopyTo(m_buffer, m_position);
+			m_position += tempBuffer.Length;
+		}
 	}
 }
