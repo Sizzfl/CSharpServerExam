@@ -1,0 +1,7 @@
+C:\Users\pjw10\OneDrive\바탕 화면\File\Programming\CSharpGameServer\GameServerExam\GameServer\bin\Debug\GameServer.exe.config
+C:\Users\pjw10\OneDrive\바탕 화면\File\Programming\CSharpGameServer\GameServerExam\GameServer\bin\Debug\GameServer.exe
+C:\Users\pjw10\OneDrive\바탕 화면\File\Programming\CSharpGameServer\GameServerExam\GameServer\bin\Debug\GameServer.pdb
+C:\Users\pjw10\OneDrive\바탕 화면\File\Programming\CSharpGameServer\GameServerExam\GameServer\obj\Debug\GameServer.csproj.AssemblyReference.cache
+C:\Users\pjw10\OneDrive\바탕 화면\File\Programming\CSharpGameServer\GameServerExam\GameServer\obj\Debug\GameServer.csproj.CoreCompileInputs.cache
+C:\Users\pjw10\OneDrive\바탕 화면\File\Programming\CSharpGameServer\GameServerExam\GameServer\obj\Debug\GameServer.exe
+C:\Users\pjw10\OneDrive\바탕 화면\File\Programming\CSharpGameServer\GameServerExam\GameServer\obj\Debug\GameServer.pdb
